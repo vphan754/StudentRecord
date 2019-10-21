@@ -15,7 +15,12 @@ public class StudentRecord
     */
    private double average(int first, int last)
    {
-      return 0; //here so the class compiles
+      int total = 0;
+      for (int i = first; i<last; i++)
+      {
+          total+=scores[i];
+      }
+      return ((total*1.0d)/(first-last));
    }
     
    /** returns true if each successive value in scores is greater than
